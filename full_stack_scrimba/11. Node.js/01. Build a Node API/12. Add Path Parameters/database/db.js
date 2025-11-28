@@ -1,5 +1,5 @@
-import { data } from "../data/data.js"
+import { datas } from "../data/data.js"
 
 export async function getDataFromDB() {
-  return data;
+  return datas;
 } 
