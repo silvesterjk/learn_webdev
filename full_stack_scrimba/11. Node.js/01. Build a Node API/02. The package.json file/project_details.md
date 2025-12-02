@@ -6,6 +6,6 @@ test command: default
 git repository: default
 keywords: default
 authour: your name
-license: default
+license: default.
 
 Remember: hit enter to accept the default option.
