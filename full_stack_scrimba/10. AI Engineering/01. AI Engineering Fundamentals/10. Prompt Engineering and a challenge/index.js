@@ -1,13 +1,23 @@
 import OpenAI from 'openai'
 
-/**
- * Challenge:
- * 1. Ask OpenAI to explain something complicated 
- *    to you. For example Quantum Computing.
- * 
- * Prompt Engineering Stretch Goals
- * - See if you can control the level of complexity of 
- *   the generated content, for example is this for 
- *   10-year-olds or college kids?
- * - See if you can control the length of the output.
- * **/ 
+const openai = new OpenAI({
+    dangerouslyAllowBrowser: true
+})
+
+const messages = [
+    {
+        role: "system",
+        content: "You are a helpful teacher."
+    },
+    {
+        role: "user",
+        content: "Explain Quantum Computing to me like I am a 10-year-old. Keep it to one sentence."
+    }
+]
+
+const response = await openai.chat.completions.create({
+    model: "gpt-3.5-turbo",
+    messages: messages
+})
+
+console.log(response.choices[0].message.content)
