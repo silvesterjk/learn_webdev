@@ -11,7 +11,7 @@ const messages = [
     },
     {
         role: "user",
-        content: "Explain Quantum Computing to me like I am a 10-year-old. Keep it to one sentence."
+        content: "Explain Quantum Computing to me like I am a 10-year old. Keep it to one sentence."
     }
 ]
 
